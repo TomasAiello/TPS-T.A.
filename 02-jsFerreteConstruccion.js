@@ -28,7 +28,7 @@ function Circulo ()
     var circulo;
     var radio; 
     radio= document.getElementById("txtIdRadio").value;
-    circulo = parseFloat(6,28*radio); 
+    circulo = parseFloat(Math.PI*radio); 
 
     alert (circulo*3).toFixed(2);
     
