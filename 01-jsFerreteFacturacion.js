@@ -41,11 +41,11 @@ function PrecioFinal ()
     var p3;
     var preciofinal;
     
-    p1=document.getElementById("txtIdPrecioUno").value;
-    p2=document.getElementById("txtIdPrecioDos").value;
-    p3=document.getElementById("txtIdPrecioTres").value;
+    p1=parseFloat(document.getElementById("txtIdPrecioUno").value);
+    p2=parseFloat(document.getElementById("txtIdPrecioDos").value);
+    p3=parseFloat(document.getElementById("txtIdPrecioTres").value);
 
-    preciofinal= parseFloat(p1)+parseFloat(p2)+parseFloat(p3)*1.21;
+    preciofinal= (p1+p2p3)*1.21;
     alert (preciofinal.toFixed(2));
 
 	
