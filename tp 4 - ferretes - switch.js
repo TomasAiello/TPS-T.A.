@@ -19,7 +19,11 @@ function CalcularPrecio () //switch
 
     //A
     switch (cantidad)
-    {
+    {   
+        case 0:
+        case 1:
+        case 2:
+            break;
         case 3:
             if (marca = "ArgentinaLuz")
             {
@@ -33,7 +37,7 @@ function CalcularPrecio () //switch
             {
                 document.getElementById("txtIdprecioDescuento").value = preciofinal - (preciofinal * 0.05);
             }
-        
+            break;
         case 4:
             if (marca = "ArgentinaLuz" || "FelipeLamparas")
             {
@@ -64,7 +68,7 @@ function CalcularPrecio () //switch
     }
     
     //E
-    if (preciofinal - (preciofinal * 0.5) >= 120) // el 0.5 es el valor del descuento para cantidades, que una vez aplicado su descuento, suman $120.
+    if (preciofinal - (preciofinal * 0.5) >= 120) // 0.5 es el valor del descuento para cantidades, que una vez aplicado su descuento, suman por lo menos $120.
     {
             document.getElementById("txtIdprecioDescuento").value = preciofinal *0.5 + ingresosbrutos;
             alert ("Usted pago $" + (preciofinal * 0.5 + ingresosbrutos) + " de IIBB, " + "siendo $" + ingresosbrutos + " el impuesto que se pago");
