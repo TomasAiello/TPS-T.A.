@@ -17,7 +17,7 @@ function CalcularPrecio () //switch
     preciofinal = preciounidad * cantidad;
     ingresosbrutos = preciofinal * 0.1; 
 
-    //A
+    //A-B-C-D
     switch (cantidad)
     {   
         case 0:
@@ -63,16 +63,20 @@ function CalcularPrecio () //switch
         default:
         
             document.getElementById("txtIdprecioDescuento").value = preciofinal - (preciofinal * 0.5);
+            
+            //E
+            if (preciofinal - (preciofinal * 0.5) >= 120) // 0.5 es el valor del descuento para cantidades, que una vez aplicado su descuento, suman por lo menos $120.
+            {
+                    document.getElementById("txtIdprecioDescuento").value = preciofinal *0.5 + ingresosbrutos;
+                    alert ("Usted pago $" + (preciofinal * 0.5 + ingresosbrutos) + " de IIBB, " + "siendo $" + ingresosbrutos + " el impuesto que se pago");
+            }
+
             break;
         
     }
     
-    //E
-    if (preciofinal - (preciofinal * 0.5) >= 120) // 0.5 es el valor del descuento para cantidades, que una vez aplicado su descuento, suman por lo menos $120.
-    {
-            document.getElementById("txtIdprecioDescuento").value = preciofinal *0.5 + ingresosbrutos;
-            alert ("Usted pago $" + (preciofinal * 0.5 + ingresosbrutos) + " de IIBB, " + "siendo $" + ingresosbrutos + " el impuesto que se pago");
-    }
+    
+    
 
 }
 

@@ -26,6 +26,7 @@ function CalcularPrecio ()
     {
         // quisiera definir el valor de la variable "descuento" en cada una de las condiciones pero no se puede? 
         document.getElementById("txtIdprecioDescuento").value = preciofinal - (preciofinal * 0.5);
+        //E
         if (preciofinal - (preciofinal * 0.5) >= 120)
         {
             document.getElementById("txtIdprecioDescuento").value = preciofinal *0.5 + ingresosbrutos;
